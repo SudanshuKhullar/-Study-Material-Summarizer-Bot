@@ -1,43 +1,72 @@
 Study Material Summarizer Bot
 
-An AI-powered Streamlit web app that helps students quickly summarize study materials, generate quizzes, and listen to audio playback.
-It supports OCR (image-based text extraction), speech-to-text transcription, and manual text input, making it a versatile learning assistant.
+A lightweight yet powerful Streamlit-based application designed to help students make the most out of their study sessions.
+The app extracts text from images, speech, or plain text and automatically generates:
 
-Features
+Concise summaries
 
-OCR Extraction: Extracts text from uploaded study notes (images).
+Multiple Choice Questions (MCQs)
 
-Speech-to-Text: Record your voice and convert it into text.
+Subjective questions for deeper understanding
 
-Text Summarization: Auto-generates concise key points using NLP + TF-IDF.
+Audio playback of generated content
 
-MCQ Generator: Creates multiple-choice questions with answers for quick revision.
+This makes it a personal study assistant for quick revision and active learning.
 
-Subjective Questions: Generates descriptive questions for deeper learning.
+Why this project?
 
-Text-to-Speech: Listen to summaries, MCQs, and subjective questions.
+Students often spend too much time reading and filtering notes.
 
-Downloadable PDF (planned) for offline use.
+This tool condenses large chunks of information into clear, usable knowledge.
 
-Word Cloud & Visualization (optional extension) for better comprehension.
+It transforms study material into interactive quizzes and audio summaries, making revision faster and smarter.
 
-Tech Stack
+Core Features
+Input Sources
+
+Upload an image of your notes (OCR-based text extraction)
+
+Record your voice and let speech-to-text convert it into text
+
+Paste your notes directly as text
+
+Processing
+
+Cleans and preprocesses extracted content
+
+Summarizes text using TF-IDF and NLP techniques
+
+Generates MCQs and subjective-type questions
+
+Converts summaries and questions into speech for easy listening
+
+Output
+
+Clean, structured summaries
+
+Auto-generated quizzes with answers
+
+Audio playback of study material
+
+Planned: Export as PDF for offline use
+
+Technology Stack
 
 Frontend & Framework: Streamlit
 
-OCR: EasyOCR
+Optical Character Recognition: EasyOCR
 
-Speech Recognition: SpeechRecognition + Google Speech API
+Speech-to-Text: SpeechRecognition + Google Speech API
 
-NLP & Summarization: NLTK + TF-IDF (Scikit-learn)
+Natural Language Processing: NLTK, Scikit-learn (TF-IDF)
 
-Text-to-Speech: gTTS (Google Text-to-Speech)
+Text-to-Speech: gTTS
 
 Visualization: Matplotlib, WordCloud
 
-Export: FPDF (for future PDF support)
+Export: FPDF
 
-Installation
+Installation Guide
 
 Clone the repository:
 
@@ -45,42 +74,24 @@ git clone https://github.com/your-username/study-material-summarizer.git
 cd study-material-summarizer
 
 
-Create a virtual environment (recommended):
+Create and activate a virtual environment (recommended):
 
 python -m venv venv
-source venv/bin/activate   # for Linux/Mac
-venv\Scripts\activate      # for Windows
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
 
 Install dependencies:
 
 pip install -r requirements.txt
 
+Running the App
 
-Make sure NLTK resources are downloaded (first run will auto-download).
-
-Usage
-
-Run the Streamlit app:
+Start the Streamlit server:
 
 streamlit run app.py
 
 
-Then open in your browser:
+Then open your browser and navigate to:
 
 http://localhost:8501
-
-Project Structure
-study-material-summarizer/
-│── app.py                # Main Streamlit app
-│── requirements.txt       # Python dependencies
-│── README.md              # Project documentation
-│── study_summarizer.log   # Log file (auto-generated)
-
-Future Enhancements
-
-Save summarized notes & quizzes as downloadable PDF
-
-Multi-language OCR and summarization support
-
-Integration with LLMs for advanced question generation
