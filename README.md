@@ -62,3 +62,32 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/study-material-summarizer.git
 cd study-material-summarizer
+
+Create and activate a virtual environment (recommended):
+
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Running the App
+
+Start the Streamlit server:
+
+streamlit run app.py
+
+
+Then open your browser at:
+
+http://localhost:8501
+
+Project Structure
+study-material-summarizer/
+│── app.py                # Main application file
+│── requirements.txt       # Python dependencies
+│── README.md              # Project documentation
+│── study_summarizer.log   # Log file (auto-generated during runs)
